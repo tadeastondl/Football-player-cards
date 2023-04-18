@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.edit-link{
+    color: white;
+    text-decoration: none;
+    
+}
+.edit-link:hover{
+    color: rgb(195, 195, 195);
+}
+.card{
+    top: 3em;
+    margin: auto;
+    text-align: center;
+  }
+
+.grid{
+    display: grid;
+    place-content: center;
+    width: fit-content;
+    gap: 1rem;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+@media(min-width: 800px){
+    .grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media(min-width: 1200px){
+    .grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media(min-width: 1500px){
+    .grid{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
