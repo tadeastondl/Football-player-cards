@@ -11,12 +11,12 @@ const NavBar = () => {
       <Navbar.Brand href="/" >
         <img
           alt=""
-          src="/bohac.jpg"
+          src="/example.png"
           width="30"
           height="30"
           className="d-inline-block align-top"
           style={{ marginRight: '0.7rem' }}
-        />SuiMaker </Navbar.Brand>
+        />SuuiMaker </Navbar.Brand>
       <Nav className="me-auto">
         <Nav.Link href="/create">CreatePage</Nav.Link>
       </Nav>
