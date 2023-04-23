@@ -1,4 +1,4 @@
-# Footbal-player-cards
+# Football-player-cards
 
 install node in front and end
 
