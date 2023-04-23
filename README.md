@@ -1,6 +1,6 @@
 # Football-player-cards
 
-install node in front and end
+install node in client and server.
 
 npm i 
 
