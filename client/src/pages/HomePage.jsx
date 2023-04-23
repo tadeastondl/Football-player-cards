@@ -5,31 +5,35 @@ import axios from 'axios'
 const HomePage = () => {
 
     const [players, setPlayers] = useState()
-    const [loading, setLoading] = useState(true)
+    const [responseStatus, setResponseStatus] = useState("loading")
 
     useEffect(() => {
         axios.get(`${import.meta.env.VITE_BACKEND_URL}/player`)
             .then(async res => {
-                setPlayers(await res.data.players)
-                setLoading(false)
+                console.log(res.data)
+                setPlayers(res.data.players)
+                setResponseStatus("success")
+            })
+            .catch((error) => {
+                const res = error.response
+                setResponseStatus("error")
             })
     }, [])
 
-    
-  return (
-    <div>
-        {loading ? 
-        <p>Loading</p> :
-  
-             <div className='grid'>
+
+    return (
+        <div>
+            {responseStatus === "loading" && <p>Loading</p>}
+            {responseStatus === "error" && <p>No players found</p>}
+            {responseStatus === "success" &&
+                <div className='grid'>
                     {players.map((player, index) => {
                         return <Card {...player} key={index} />
                     })}
-             </div>
-  
-        }
-    </div>
-  )
+                </div>
+            }
+        </div>
+    )
 }
 
 export default HomePage

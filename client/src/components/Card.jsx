@@ -17,14 +17,14 @@ const PlayerCard = (props) => {
     return (
 
         <div>
-            <Card border= 'primary' style={{ width: '18rem'  }} >
+            <Card border= 'primary' style={{ width: '13rem'  }} >
                 <Card.Img variant="top" src="example.png" style={{ width: 'auto'}} />
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>{props.nationality}</Card.Text>
                     <Card.Text>{props.team}</Card.Text>
-                    <Card.Text>{props.rating}</Card.Text>
-                    <Button> <Link className='edit-link' to={`/edit/${props._id}`}>Edit</Link></Button>
+                    <Card.Text>overall rating: {props.rating}</Card.Text>
+                    <Button style={{marginRight: '0.5rem'}}> <Link className='edit-link' to={`/edit/${props._id}`}>Edit</Link></Button>
                     <Button variant="primary" onClick={() => { DeletePlayer(props._id) }}>Delete</Button>
                 </Card.Body>
             </Card>
