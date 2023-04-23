@@ -25,4 +25,4 @@ npm i
 
 You also need to create your own Mongo database.
 
-create .env file inside of server folder and set the password there 
+create .env file inside of server folder and set the password inside of: MONGOPWD = ""
